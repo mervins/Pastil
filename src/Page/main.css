@@ -1,0 +1,86 @@
+.mainPage{
+    background-color: #1d1d1f;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.image_Pastil{
+    margin-top: 4vmin;   
+    z-index: 2;
+    position: absolute;
+    top:210px; 
+}
+.image_Pastil>img{
+    width: 400px;
+}
+.titles{ 
+    position: absolute;
+    text-align: center;
+    z-index: 1;
+    top:55px; 
+    justify-content: center;
+}
+.title1, .title2, .title3{
+    color: #eee;
+    margin: 0;
+    padding: 0;
+}
+
+.title1{
+    font-size: 3vmin;
+}
+.title2{
+    font-size: 8vmin; 
+    letter-spacing: 2vmin;
+}
+.title3{
+    margin-left: 2vmin;
+    font-size: 10vmin;
+    font-weight: 700;
+    letter-spacing: 5vmin; 
+    
+}
+
+.card{
+    position: absolute;
+    top:520px; 
+    z-index: 3;
+    background-color: #eee;
+    max-width: 600px; 
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(153, 149, 149, 0.25); 
+    max-height: 250px;
+}
+.line-header{
+    background-color: #00bcd4;
+    border-top-left-radius:12px ;
+    border-top-right-radius:12px ;
+    height: 1vmin;
+}
+.card-content{
+    text-align: center;
+}
+h2{
+    font-weight: 400;
+    letter-spacing: 5px;
+}
+
+.description{
+    text-align: center;
+    padding: 0 3vmin;
+}
+
+ 
+footer{
+    margin-top: auto; 
+    display: flex;
+    flex-direction: row;
+}
+.images-set>img{
+    width: 47vmin; 
+    opacity: 0.1;
+}
