@@ -1,7 +1,9 @@
 import './main.css';
 import pastilMain from '../assets/pastil.png'; 
 import footerimg from '../assets/footer.png';
-import f1 from '../assets/f1.JPG';
+import p1 from '../assets/pater1.jpg';
+import p2 from '../assets/pater2.jpg';
+import p3 from '../assets/pater3.jpg';
 const Main = ()=>{
     return(
         <>
@@ -29,19 +31,19 @@ const Main = ()=>{
                             <div className='description'>
                             Pastil which is known to have been originated in Maguindanao is an easy to cook ulam composed of rice, topped with sautéed chicken, fish, or beef flakes. This banana leaf wrapped 
                             meal is a staple in Maguindanao’s market places, sidewalks, and alleys. With its affordable price, it has been dubbed as a “Poor Man’s Meal.
-                            </div>
-                            <div className='card-images'>
-                                <div>
-                                    <img src={f1}></img> 
-                                </div>
-                                <div>
-                                    <img src={f1}></img> 
-                                </div>
-                                <div>
-                                    <img src={f1}></img> 
-                                </div>
-                            </div>
+                            </div> 
                         </div>
+                        <div className='card-images'>
+                                <div>
+                                    <img className='pastil' src={p1} ></img> 
+                                </div>
+                                <div>
+                                    <img className='pastil' src={p2}  ></img> 
+                                </div>
+                                <div>
+                                    <img className='pastil' src={p3}  ></img> 
+                                </div>
+                            </div>
                     </div>
                </div>
                 <footer> 

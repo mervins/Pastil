@@ -11,8 +11,7 @@
     position: relative; 
 }
 
-.image_Pastil{
-    margin-top:40px;   
+.image_Pastil{ 
     z-index: 2;
     position: absolute;
     top:210px; 
@@ -30,6 +29,7 @@
     color: #eee;
     margin: 0;
     padding: 0;
+    line-height: 1;
 }
 
 .title1{
@@ -60,18 +60,15 @@
 
 .card{
     position: absolute;
-    top:520px; 
+    top:450px; 
     z-index: 3;
     background-color: #eee;
-    max-width: 600px; 
-    border-radius: 12px;
+    max-width: 700px;  
     box-shadow: 0 3px 8px rgba(153, 149, 149, 0.25); 
-    max-height: 250px;
+    height: auto;
 }
 .line-header{
-    background-color: #00bcd4;
-    border-top-left-radius:12px ;
-    border-top-right-radius:12px ;
+    background-color: #00bcd4; 
     height: 1vmin;
 }
 .card-content{
@@ -84,9 +81,13 @@ h2{
     padding: 0;
 }
 
+.card-content>h2:nth-child(1){
+    margin-top: 25px;
+}
+
 .description{
-    text-align: center;
-    padding: 0 3vmin;
+    text-align: justify;
+    padding: 2.5vmin 7vmin;
 }
 
  
@@ -99,4 +100,20 @@ footer{
     width: 100vw; 
     opacity: 0.1;
     height: 300px;
+} 
+
+.card-images{  
+    display: flex;
+    position: relative;   
+}
+ 
+
+.pastil{  
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+    display: block; 
+    height: auto; 
+    border: 5px solid white;
+    box-sizing: border-box; 
 }
