@@ -1,15 +1,18 @@
+
 .mainPage{
     background-color: #1d1d1f;
-    min-height: 100vh;
+    height: 100vh; 
+}
+.main-conatent{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    position: relative;
+    position: relative; 
 }
 
 .image_Pastil{
-    margin-top: 4vmin;   
+    margin-top:40px;   
     z-index: 2;
     position: absolute;
     top:210px; 
@@ -21,8 +24,7 @@
     position: absolute;
     text-align: center;
     z-index: 1;
-    top:55px; 
-    justify-content: center;
+    top:55px;  
 }
 .title1, .title2, .title3{
     color: #eee;
@@ -32,6 +34,17 @@
 
 .title1{
     font-size: 3vmin;
+    width: 100%; 
+    text-align: center; 
+    border-bottom: 2px solid #eee; 
+    line-height: 0.1em;
+    margin: 10px 0 20px;
+    font-family: 'Cookie', cursive;
+}
+
+.title1 span { 
+    background:#1d1d1f; 
+    padding:0 25px; 
 }
 .title2{
     font-size: 8vmin; 
@@ -67,6 +80,8 @@
 h2{
     font-weight: 400;
     letter-spacing: 5px;
+    margin: 0;
+    padding: 0;
 }
 
 .description{
@@ -76,11 +91,12 @@ h2{
 
  
 footer{
-    margin-top: auto; 
-    display: flex;
-    flex-direction: row;
+    position: fixed;
+    left: 0;
+    bottom: 0; 
 }
-.images-set>img{
-    width: 47vmin; 
+.images-set>img{ 
+    width: 100vw; 
     opacity: 0.1;
+    height: 300px;
 }
