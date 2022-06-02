@@ -1,20 +1,20 @@
 import './main.css';
 import pastilMain from '../assets/pastil.png'; 
-import footerimg from '../assets/footer.png';
-import p1 from '../assets/pater1.jpg';
-import p2 from '../assets/pater2.jpg';
-import p3 from '../assets/pater3.jpg';
-import bfast from '../assets/breakfast.png'; 
-import lunch from '../assets/lunch.png'; 
-import dinner from '../assets/dinner.png';
+import footerimg from '../assets/footer.png'; 
 import Fade from 'react-reveal/Fade';
-import Zoom from 'react-reveal/Zoom';
+import Zoom from 'react-reveal/Zoom'; 
+import Slide from 'react-reveal/Slide'; 
+import GroupImage,{MealTime} from '../components/GroupImage';
 
 const Main = ()=>{
+    const imageGroup = MealTime.map((item)=>{
+        return <GroupImage item={item}></GroupImage>
+    })
+
     return(
-        <>
+        <div className='container'>
             <div className="mainPage">
-               <div className='main-conatent'>  
+               <div className='main-content'>  
                     <div className='titles'>
                         <Fade left cascade>
                             <div className='title1'>
@@ -35,6 +35,7 @@ const Main = ()=>{
                         <img src={pastilMain} alt="Main-Pastil"/>
                     </div>
                     </Zoom>
+                    <Slide bottom>
                     <div className="card">
                         <div className='line-header'></div>
                         <div className='card-content'>
@@ -44,51 +45,23 @@ const Main = ()=>{
                             Pastil which is known to have been originated in Maguindanao is an easy to cook ulam composed of rice, topped with sautéed chicken, fish, or beef flakes. This banana leaf wrapped 
                             meal is a staple in Maguindanao’s market places, sidewalks, and alleys. With its affordable price, it has been dubbed as a “Poor Man’s Meal.
                             </div> 
-                        </div>
+                        </div>  
                         <div className='card-images'>
-                                <div className='pastil1'>
-                                    <div>
-                                        <img className='pastil' src={p1} alt="pastil"/> 
-                                    </div>
-                                    <div className='icon-pastil'>
-                                        <div className='icon-content'>
-                                            <img src={bfast} alt="pastil"/>
-                                        </div>  
-                                        <div><h3>Breakfast</h3></div>
-                                    </div>
-                                </div>
-                                <div className='pastil1'>
-                                    <div>
-                                        <img className='pastil' src={p2} alt="pastil"/>
-                                    </div>
-                                    <div className='icon-pastil'>
-                                        <div className='icon-content'>
-                                            <img src={lunch} alt="pastil"/>
-                                        </div>  
-                                        <div><h3>Lunch</h3></div>
-                                    </div>   
-                                </div> 
-                                <div className='pastil1'>
-                                    <div>
-                                    <img className='pastil' src={p3}  alt="pastil"/>
-                                    </div>
-                                    <div className='icon-pastil'>
-                                        <div className='icon-content'>
-                                            <img src={dinner} alt="pastil"/>
-                                        </div>  
-                                        <div><h3>Dinner</h3></div>
-                                    </div>   
-                                </div>  
-                            </div>
+                           {imageGroup}
+                        </div> 
                     </div>
-               </div>
+                    </Slide>
+               </div>  
                 <footer> 
                     <div className='images-set'>
                         <img src={footerimg} alt="pastil"/>
                     </div>
                 </footer>
             </div>
-        </>
+            <div className='secondPage'>
+                    <center>PAGE 2</center>
+            </div>
+        </div>
     )
 }
 export default Main;

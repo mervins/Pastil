@@ -3,7 +3,13 @@
     background-color: #1d1d1f;
     height: 100vh; 
 }
-.main-conatent{
+.container{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.main-content{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -88,6 +94,8 @@ h2{
 .description{
     text-align: justify;
     padding: 2.5vmin 7vmin;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
 }
 
  
@@ -121,38 +129,38 @@ footer{
     
 }
 
-.icon-pastil{
-    position: absolute;
-    top: -25px;   
-    width: 100%; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    color: #1f2125;
-}
-.icon-content{  
-    background-color: #1f2125;
-    width: 10vmin;
-    height: 10vmin;
-    border-radius: 50%; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 70px;
-    max-height: 70px;
-}
-
-div>h3{
-    font-weight: 500;
-}
+ 
+ 
 .icon-content>img{ 
     object-fit: contain;
     height: 5vmin;
     width: 5vmin;
 }
 
-.pastil1{
-    position: relative;  
+.secondPage{
+    background-color: #eee;
+    height: 100vh;
 }
  
+ 
+@media screen and (max-width: 792px) {
+    .card-images {
+        display: flex;
+        flex-direction: column;
+        margin: 5vmin;
+    }
+    .card{
+        margin: 4vmin; 
+    }
+    .mainPage{ 
+        background-color: #1d1d1f;
+        overflow: scroll;
+        width: 100%;
+    }
+    .secondPage{  
+        width: 100%;
+    }
+    footer{
+        display: none;
+    }
+  }

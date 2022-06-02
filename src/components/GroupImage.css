@@ -1,0 +1,46 @@
+ .pastil1{
+    position: relative;  
+}
+ 
+.icon-pastil{
+    position: absolute;
+    top: -25px;   
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #1f2125;
+}
+
+.icon-content{  
+    background-color: #1f2125;
+    width: 10vmin;
+    height: 10vmin;
+    border-radius: 50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 70px;
+    max-height: 70px;
+}
+
+div>h3{
+    font-weight: 500;
+}
+
+@media screen and (max-width: 792px) {
+    .pastil1{
+        margin-top: 9vmin;
+    }
+    
+    .icon-content{  
+        width: 18vmin;
+        height: 18vmin;
+        max-width: 80px;
+        max-height: 80px;
+    }
+    .icon-content>img{
+        width: 45vmin;
+    }
+  }
