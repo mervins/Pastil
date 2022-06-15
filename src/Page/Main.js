@@ -1,6 +1,7 @@
 import './main.css';
 import pastilMain from '../assets/pastil.png'; 
 import footerimg from '../assets/footer.png'; 
+import logov2 from '../assets/logov3.png'; 
 import Fade from 'react-reveal/Fade';
 import Zoom from 'react-reveal/Zoom'; 
 import Slide from 'react-reveal/Slide'; 
@@ -12,8 +13,16 @@ const Main = ()=>{
     })
 
     return(
-        <div className='container'>
+        <div className='container'> 
             <div className="mainPage">
+            <div className='logo'>
+                <div>
+                    <img src={logov2}/>
+                </div>
+                <div>
+                    Pastil Ni Babo
+                </div>
+            </div>
                <div className='main-content'>  
                     <div className='titles'>
                         <Fade left cascade>
@@ -40,7 +49,7 @@ const Main = ()=>{
                         <div className='line-header'></div>
                         <div className='card-content'>
                             <h2>WELCOME TO</h2>
-                            <h2>Pastil ni Babo</h2>
+                            <h2 className='pastil-ni-babo'>Pastil ni Babo</h2>
                             <div className='description'>
                             Pastil which is known to have been originated in Maguindanao is an easy to cook ulam composed of rice, topped with sautéed chicken, fish, or beef flakes. This banana leaf wrapped 
                             meal is a staple in Maguindanao’s market places, sidewalks, and alleys. With its affordable price, it has been dubbed as a “Poor Man’s Meal.
@@ -54,13 +63,16 @@ const Main = ()=>{
                </div>  
                 <footer> 
                     <div className='images-set'>
-                        <img src={footerimg} alt="pastil"/>
+                        <div>
+                            LET'S TALK
+                        </div>
+                        {/* <img src={footerimg} alt="pastil"/> */}
                     </div>
                 </footer>
             </div>
-            <div className='secondPage'>
+            {/* <div className='secondPage'>
                     <center>PAGE 2</center>
-            </div>
+            </div> */}
         </div>
     )
 }

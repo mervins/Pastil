@@ -88,7 +88,12 @@ h2{
 }
 
 .card-content>h2:nth-child(1){
-    margin-top: 25px;
+    margin-top: 25px; 
+}
+.pastil-ni-babo{ 
+    letter-spacing: .8vmin;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
 }
 
 .description{
@@ -102,7 +107,10 @@ h2{
 footer{
     position: fixed;
     left: 0;
-    bottom: 0; 
+    bottom: 0;  
+    background-color: #eee;
+    height: 300px;
+    width: 100vw; 
 }
 .images-set>img{ 
     width: 100vw; 
@@ -128,7 +136,6 @@ footer{
     opacity: 0.5;
     
 }
-
  
  
 .icon-content>img{ 
@@ -142,6 +149,32 @@ footer{
     height: 100vh;
 }
  
+.logo{
+    position:fixed;
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    left: 3vmin;
+    top:2vmin
+}
+.logo>div>img{
+    width: 6vmin; 
+    filter: grayscale(90);
+}
+
+.logo>div:nth-child(2){
+    margin-left: 2vmin ;
+    font-size: 2vmin; 
+    letter-spacing: .8vmin;
+    font-family: 'Montserrat', sans-serif;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .logo>div>img {
+      animation: App-logo-spin infinite 10s linear;
+    }
+  }
  
 @media screen and (max-width: 792px) {
     .card-images {
@@ -162,5 +195,34 @@ footer{
     }
     footer{
         display: none;
+    }
+    .logo{
+        position: relative;
+        left: 0;
+        margin: 0; 
+    }
+    .logo>div:nth-child(2){
+        margin-left: 2vmin ;
+        font-size: 4vmin; 
+        letter-spacing: .8vmin;
+        font-family: 'Montserrat', sans-serif;
+    } 
+    .logo>div>img{
+        width: 9vmin; 
+    }
+    .image_Pastil{
+        top:124px;
+    }
+    .titles{
+        top:0px;
+    }
+  }
+
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
     }
   }
