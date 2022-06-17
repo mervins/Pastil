@@ -1,7 +1,23 @@
  .pastil1{
-    position: relative;  
+    position: relative;   
+    cursor: pointer; 
 }
- 
+
+.pastil{  
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+    display: block; 
+    height: auto; 
+    border: 5px solid white;
+    box-sizing: border-box; 
+    opacity: 0.5;
+}
+
+.pastil1:hover .pastil{
+    opacity: 1;
+}
+
 .icon-pastil{
     position: absolute;
     top: -25px;   

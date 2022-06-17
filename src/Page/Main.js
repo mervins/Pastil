@@ -1,28 +1,92 @@
 import './main.css';
-import pastilMain from '../assets/pastil.png'; 
-import footerimg from '../assets/footer.png'; 
+import pastilMain from '../assets/pastil.png';  
 import logov2 from '../assets/logov3.png'; 
 import Fade from 'react-reveal/Fade';
 import Zoom from 'react-reveal/Zoom'; 
-import Slide from 'react-reveal/Slide'; 
+import Slide from 'react-reveal/Slide';  
 import GroupImage,{MealTime} from '../components/GroupImage';
+import { FloatingButton } from '../components/buttons/buttons';
+import Modal,{ModalTitle,ModalContent,ModalCard} from '../components/Modal/modal';
+import { FcCurrencyExchange,FcCandleSticks,FcFactory,FcMoneyTransfer,FcServices,FcGlobe,FcPodiumWithSpeaker,FcTwoSmartphones } from "react-icons/fc";  
+import { useState } from 'react';
+
+const LETSTALK = [
+    {
+    title:'How much? It cost P25.00 only',
+    icon:<FcCurrencyExchange/>
+    },
+    {
+    title:'The pastil has two variety: Spicy and not spicy',
+    icon:<FcCandleSticks/>
+    },
+    {
+    title:`Store: In the meantime, we don't have a physical store`,
+    icon:<FcFactory/>
+    },
+    {
+    title:'Services: We do delivery and pick-up',
+    icon:<FcServices/>
+    },
+    {
+        title:`Policy for Delivery: Minimum of 5pcs pastil. Add P40.00 for delivery fee around Malaybalay City`,
+        icon:<FcGlobe/>
+    },
+    {
+        title:`Pick-up location: San Jose Crossing Mabuhay`,
+        icon:<FcPodiumWithSpeaker/>
+    },
+    {
+        title:`Payment Policy: Cash and Gcash`,
+        icon:<FcMoneyTransfer/>
+    },{
+        title:<p>Contact us: +639362701121 or direct to our <a href="https://www.facebook.com/Pastil-Ni-Babo-109602631786226">Facebook Page</a></p>,
+        icon:<FcTwoSmartphones/>
+    }
+
+]
 
 const Main = ()=>{
-    const imageGroup = MealTime.map((item)=>{
-        return <GroupImage item={item}></GroupImage>
-    })
-
+    const [showInfo,setShowInfo] = useState(false);
+    const [showList,setShowList] = useState(false)
+    const imageGroup = MealTime.map((item,index)=>{
+        return <GroupImage item={item} key={index}></GroupImage>
+    }) 
     return(
         <div className='container'> 
+            {showInfo && 
+            <Modal onClose={()=>{setShowInfo(false); setShowList(false);}}>
+                <ModalCard>
+                    <ModalTitle><center><h1>Let's Talk</h1></center></ModalTitle>
+                    <ModalContent> 
+                    <Zoom left cascade when={showList}>  
+                        <div>
+                            {
+                            LETSTALK.map((item,index)=>{
+                                return( 
+                                    <div className='boxList' key={index}>
+                                        <div className='insideBoxCircle'>{item.icon}</div>
+                                        <div className='boxContent'>{item.title}</div>
+                                    </div>  
+                                )
+                            })
+                            }
+                        </div>
+                    </Zoom> 
+                    </ModalContent>
+                </ModalCard> 
+            </Modal>}
+            
             <div className="mainPage">
-            <div className='logo'>
-                <div>
-                    <img src={logov2}/>
+            <Fade left>
+                <div className='logo'>
+                    <div>
+                        <img src={logov2}/>
+                    </div>
+                    <div>
+                        Pastil Ni Babo
+                    </div>
                 </div>
-                <div>
-                    Pastil Ni Babo
-                </div>
-            </div>
+            </Fade>
                <div className='main-content'>  
                     <div className='titles'>
                         <Fade left cascade>
@@ -40,8 +104,8 @@ const Main = ()=>{
                             </div> 
                     </div>
                     <Zoom>
-                    <div className="image_Pastil">
-                        <img src={pastilMain} alt="Main-Pastil"/>
+                    <div className="image_Pastil"> 
+                      <div><img src={pastilMain} alt="Main-Pastil"/></div> 
                     </div>
                     </Zoom>
                     <Slide bottom>
@@ -62,13 +126,19 @@ const Main = ()=>{
                     </Slide>
                </div>  
                 <footer> 
-                    <div className='images-set'>
-                        <div>
-                            LET'S TALK
-                        </div>
+                    <div className='images-set'> 
                         {/* <img src={footerimg} alt="pastil"/> */}
                     </div>
                 </footer>
+                <div onClick={()=>{
+                    setShowInfo(true);
+                    const timer = setTimeout(() => { 
+                        setShowList(true);
+                      }, 40);
+                    }}>
+                    <FloatingButton>Let's Talk</FloatingButton>
+                </div>
+                
             </div>
             {/* <div className='secondPage'>
                     <center>PAGE 2</center>

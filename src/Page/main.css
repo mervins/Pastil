@@ -20,10 +20,18 @@
 .image_Pastil{ 
     z-index: 2;
     position: absolute;
-    top:210px; 
+    top:210px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
 }
 .image_Pastil>img{
     width: 400px;
+}
+.price{
+    color: #eee;
+    font-weight: 600;
+    font-size: 80px;
 }
 .titles{ 
     position: absolute;
@@ -123,20 +131,7 @@ footer{
     display: flex;
     position: relative;   
 }
- 
-
-.pastil{  
-    object-fit: contain;
-    height: 100%;
-    width: 100%;
-    display: block; 
-    height: auto; 
-    border: 5px solid white;
-    box-sizing: border-box; 
-    opacity: 0.5;
-    
-}
- 
+  
  
 .icon-content>img{ 
     object-fit: contain;
@@ -168,6 +163,33 @@ footer{
     font-size: 2vmin; 
     letter-spacing: .8vmin;
     font-family: 'Montserrat', sans-serif;
+}
+
+.boxList{
+    display: flex;
+    min-width: 90px;
+    background-color: antiquewhite;
+    min-height: 50px; 
+    align-items: center; 
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px; 
+    gap: 2vmin;
+    margin: 1vmin;
+    letter-spacing: 2px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+.insideBoxCircle{
+    min-width: 60px;
+    border-radius: 50%;
+    min-height: 60px;
+    background-color: #00bcd4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #eee;
+    font-size: 38px;
+    
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -211,7 +233,7 @@ footer{
         width: 9vmin; 
     }
     .image_Pastil{
-        top:124px;
+        top:124px; 
     }
     .titles{
         top:0px;
