@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/pastil/static/css/main.b9dce50e.css",
+    "main.js": "/pastil/static/js/main.2466b1c8.js",
+    "static/js/787.f78141cb.chunk.js": "/pastil/static/js/787.f78141cb.chunk.js",
+    "static/media/pater2.jpg": "/pastil/static/media/pater2.bc0c29a04ccb618740ec.jpg",
+    "static/media/pater1.jpg": "/pastil/static/media/pater1.407ecae9f198bd9e1a4b.jpg",
+    "static/media/pater3.jpg": "/pastil/static/media/pater3.b2ff9fe4abcda9f2f6df.jpg",
+    "static/media/pastil.png": "/pastil/static/media/pastil.70cee43a1915a97d71a3.png",
+    "static/media/logov3.png": "/pastil/static/media/logov3.77d6430b6ccb23f85800.png",
+    "static/media/breakfast.png": "/pastil/static/media/breakfast.717859caba500314e54a.png",
+    "index.html": "/pastil/index.html",
+    "main.b9dce50e.css.map": "/pastil/static/css/main.b9dce50e.css.map",
+    "main.2466b1c8.js.map": "/pastil/static/js/main.2466b1c8.js.map",
+    "787.f78141cb.chunk.js.map": "/pastil/static/js/787.f78141cb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b9dce50e.css",
+    "static/js/main.2466b1c8.js"
+  ]
+}
